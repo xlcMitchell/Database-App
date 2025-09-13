@@ -16,7 +16,24 @@ public class Course {
     private int creditHour;
 
     //---CONSTRUCTOR WITHOUT ARGUMENTS---//
-    public Course(){}
+
+
+    public Course(int courseId, String courseName, String description, int creditHour) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.description = description;
+        this.creditHour = creditHour;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseId=" + courseId +
+                ", courseName='" + courseName + '\'' +
+                ", description='" + description + '\'' +
+                ", creditHour=" + creditHour +
+                '}';
+    }
 
     public int getCourseId() {
         return courseId;

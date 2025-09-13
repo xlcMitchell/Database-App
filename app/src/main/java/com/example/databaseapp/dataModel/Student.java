@@ -20,7 +20,24 @@ public class Student {
     @ColumnInfo(name="mobile")
     private String mobileNumber;
 
-    public Student(){}
+    public Student(int studentId, String firstName, String lastName, Date birthDate, String mobileNumber) {
+        this.studentId = studentId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.mobileNumber = mobileNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                '}';
+    }
 
     public int getStudentId() {
         return studentId;

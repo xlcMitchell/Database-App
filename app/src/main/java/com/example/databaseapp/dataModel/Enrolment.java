@@ -24,7 +24,21 @@ public class Enrolment {
     private int studentId;
     @ColumnInfo(name = "course_id")
     private int courseId;
-    public Enrolment(){}
+
+    public Enrolment(int enrolmentId, int studentId, int courseId) {
+        this.enrolmentId = enrolmentId;
+        this.studentId = studentId;
+        this.courseId = courseId;
+    }
+
+    @Override
+    public String toString() {
+        return "Enrolment{" +
+                "enrolmentId=" + enrolmentId +
+                ", studentId=" + studentId +
+                ", courseId=" + courseId +
+                '}';
+    }
 
     public void setEnrolmentId(int enrolmentId) {
         this.enrolmentId = enrolmentId;
