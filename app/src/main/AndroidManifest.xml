@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DatabaseApp">
         <activity
+            android:name=".EnrolmentCrudActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseCrudActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentCrudActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
