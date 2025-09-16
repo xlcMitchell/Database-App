@@ -1,8 +1,11 @@
 package com.example.databaseapp;
 //dependencies updated for the use of Room
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
 
         //creating database instance
         appDatabase = AppSampleDatabase.createDatabaseInstance(this);
@@ -38,6 +42,34 @@ public class MainActivity extends AppCompatActivity {
         }
 
         readStudentRecords();
+
+        Button studentBtn = findViewById(R.id.studentCRUDBtn);
+        Button courseBtn = findViewById(R.id.courseCRUDBtn);
+        Button enrolmentBtn = findViewById(R.id.enrolmentCRUDBtn);
+
+        studentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StudentCrudActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        courseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CourseCrudActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        enrolmentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EnrolmentCrudActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void insertStudentRecords(){

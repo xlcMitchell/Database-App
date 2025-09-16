@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface EnrolmentDao {
     @Query("SELECT * FROM enrolment")
-    List<Course> readAllEnrolments();
+    List<Enrolment> readAllEnrolments();
     //-1 means record not inserted
     @Insert
     void insertEnrolment(Enrolment enrolment);

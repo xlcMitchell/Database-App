@@ -26,9 +26,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+
     //For implementation of room database library
     def room_version = "2.5.0"
     implementation "androidx.room:room-runtime:$room_version"
