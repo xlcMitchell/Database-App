@@ -15,7 +15,7 @@ public interface StudentDao {
     List<Student> readAllStudents();
     //-1 means record not inserted
         @Insert
-    void insertStudent(Student student);
+        long insertStudent(Student student);
     //0 means no record update
         @Update
     void updateStudent(Student student);
