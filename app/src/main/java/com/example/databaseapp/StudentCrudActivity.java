@@ -20,12 +20,21 @@ public class StudentCrudActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_crud);
 
         Button insertBtn = findViewById(R.id.studentInsertBtn);
+        Button updateBtn = findViewById(R.id.studentUpdateBtn);
 
         insertBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                  Intent intent = new Intent(StudentCrudActivity.this,StudentInsertActivity.class);
                  startActivity(intent);
+            }
+        });
+
+        updateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StudentCrudActivity.this,StudentURDActivity.class);
+                startActivity(intent);
             }
         });
 
