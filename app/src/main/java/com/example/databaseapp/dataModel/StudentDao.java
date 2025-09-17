@@ -18,7 +18,7 @@ public interface StudentDao {
         long insertStudent(Student student);
     //0 means no record update
         @Update
-    void updateStudent(Student student);
+        int updateStudent(Student student);
     //0 means no record is deleted
         @Delete
     void deleteStudent(Student student);

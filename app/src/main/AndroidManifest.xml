@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DatabaseApp">
         <activity
+            android:name=".StudentURDActivity"
+            android:exported="false" />
+        <activity
             android:name=".StudentInsertActivity"
             android:exported="false"
             android:theme="@style/Theme.DatabaseApp" />
